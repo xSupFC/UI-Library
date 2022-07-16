@@ -1,5 +1,9 @@
 -- Made By xHeptc
--- I added new color which is Gold :3
+
+--[[
+ New Theme = Gold, Material
+ Click Delay Removed! 
+]] 
 
 local Kavo = {}
 
@@ -38,6 +42,13 @@ local themeStyles = {
         TextColor = Color3.fromRGB(255,255,255),
         ElementColor = Color3.fromRGB(20, 20, 20)
     },
+    Material = {
+        SchemeColor = Color3.fromRGB(255,255,255),
+        Background = Color3.fromRGB(0,0,0),
+        Header = Color3.fromRGB(0,0,0),
+        TextColor = Color3.fromRGB(124,37,255),
+        ElementColor = Color3.fromRGB(20,20,20)
+   }, 
     LightTheme = {
         SchemeColor = Color3.fromRGB(150, 150, 150),
         Background = Color3.fromRGB(255,255,255),
@@ -148,6 +159,8 @@ function Kavo.CreateLib(kavName, themeList)
         themeList = themeStyles.Serpent
     elseif themeList == "Gold" then
         themeList = themeStyles.Gold
+    elseif themeList == "Material" then
+        themeList = themeStyles.Material
     else
         if themeList.SchemeColor == nil then
             themeList.SchemeColor = Color3.fromRGB(74, 99, 135)
