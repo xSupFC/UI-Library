@@ -18,6 +18,8 @@ function Dino:TitleHack(te)
     local TabWindow = Instance.new("ScrollingFrame")
     local TabWindowList = Instance.new("UIListLayout")
     local ContainerHolder = Instance.new("Frame")
+    local Togglee = Instance.new("TextButton") 
+    local UI = Instance.new("TextButton") 
     
     --Properties:
     
