@@ -98,7 +98,7 @@ function Dino:TitleHack(te)
     Togglee.Size = UDim2.new(0, 50, 0, 50)
     Togglee.Font = Enum.Font.Gotham
     Togglee.Text = "MOD MENU"
-    Togglee.TextColor3 = Color3.fromRGB(255, 0, 0)
+    Togglee.TextColor3 = _G.ColorXD
     Togglee.TextScaled = true
     Togglee.MouseButton1Down:connect(function()
     Window.Visible = false
@@ -113,7 +113,7 @@ function Dino:TitleHack(te)
     UI.Size = UDim2.new(0, 50, 0, 50)
     UI.Font = Enum.Font.Gotham
     UI.Text = "MOD MENU"
-    UI.TextColor3 = Color3.fromRGB(255, 0, 0)
+    UI.TextColor3 = _G.ColorXD
     UI.TextScaled = true
     UI.MouseButton1Down:connect(function()
     Window.Visible = true
