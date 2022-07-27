@@ -91,6 +91,36 @@ function Dino:TitleHack(te)
     ContainerHolder.Position = UDim2.new(0, 0, 0, 40)
     ContainerHolder.Size = UDim2.new(0, 200, 0, 250)
 
+    Togglee.Name = "Togglee"
+    Togglee.Parent = DinoUI
+    Togglee.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+    Togglee.Position = UDim2.new(0.120833337, 0, 0.0952890813, 0)
+    Togglee.Size = UDim2.new(0, 50, 0, 50)
+    Togglee.Font = Enum.Font.Gotham
+    Togglee.Text = "MOD MENU"
+    Togglee.TextColor3 = Color3.fromRGB(255, 0, 0)
+    Togglee.TextScaled = true
+    Togglee.MouseButton1Down:connect(function()
+    Window.Visible = false
+    Togglee.Visible = false
+    UI.Visible = true
+    end)  
+
+    UI.Name = "UI"
+    UI.Parent = DinoUI
+    UI.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+    UI.Position = UDim2.new(0.120833337, 0, 0.0952890813, 0)
+    UI.Size = UDim2.new(0, 50, 0, 50)
+    UI.Font = Enum.Font.Gotham
+    UI.Text = "MOD MENU"
+    UI.TextColor3 = Color3.fromRGB(255, 0, 0)
+    UI.TextScaled = true
+    UI.MouseButton1Down:connect(function()
+    Window.Visible = true
+    UI.Visible = false
+    Togglee.Visible = true
+    end) 
+
     -- Don't Touch This Script Or It Will Mess Up --
 
     TabWindow.CanvasSize = UDim2.new(0, 0 + TabWindowList.AbsoluteContentSize.X, 0, 0)
