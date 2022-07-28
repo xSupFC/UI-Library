@@ -1,10 +1,10 @@
 do
-    if game:GetService("CoreGui"):FindFirstChild("Zexo") then
-        game:GetService("CoreGui").FindFirstChild("Zexo"):Destroy()
+    if game:GetService("CoreGui"):FindFirstChild("DinoUI") then
+        game:GetService("CoreGui").DinoUI:Destroy()
     end
 end
 
-_G.Color = _G.ColorNew or Color3.fromRGB(0,255,0) 
+_G.Color = _G.ColorRGB or Color3.fromRGB(0,255,0) 
 
 local TweenService = game:GetService("TweenService")
 local UserInputService = game:GetService("UserInputService")
@@ -28,9 +28,9 @@ function createTween(Object,setup,settings)
 	return Anim;
 end;
 
-local ZexoLib = {}
+local Dino = {}
 
-function ZexoLib:AddIntro(text2)
+function Dino:AddIntro(text2)
         local BlueXLoader = Instance.new("ScreenGui")
         local Loader = Instance.new("Frame")
         local UICorner = Instance.new("UICorner")
@@ -55,6 +55,7 @@ function ZexoLib:AddIntro(text2)
         Loader.BorderSizePixel = 2
         Loader.Position = UDim2.new(0.5, 0, 0.5, 0)
         Loader.Size = UDim2.new(0, 0,  0, 0)
+        Loader.Visible = false
 
         UICorner.CornerRadius = UDim.new(0, 6)
         UICorner.Parent = Loader
@@ -118,13 +119,13 @@ function ZexoLib:AddIntro(text2)
         Message.SizeConstraint = Enum.SizeConstraint.RelativeXX
         Message.ZIndex = 4
         Message.Font = Enum.Font.SourceSansItalic
-        Message.Text = "Welcome, " .. game:GetService("Players").LocalPlayer.DisplayName
+        Message.Text = ""
         Message.TextColor3 = Color3.fromRGB(197, 197, 197)
         Message.TextSize = 22.000
         Message.TextTransparency = 1
 			
 	wait(2)
-
+        Loader.Visible = true
         createTween(Loader,{Size = UDim2.new(0, 280, 0, 98)}, {
             Style = Enum.EasingStyle.Linear,
             Direction = Enum.EasingDirection.In,
@@ -169,21 +170,20 @@ function ZexoLib:AddIntro(text2)
         wait(1)
         setSize(20)
         
-        for i = 1, 3 do 
-            Message.Text = "Checking ."
+        for i = 1, 4 do 
+            Message.Text = "Loading ."
             wait(.4)
-            Message.Text = "Checking . ."
+            Message.Text = "Loading . ."
             wait(.4)
-            Message.Text = "Checking . . ."
+            Message.Text = "Loading . . ."
             wait(.4)
         end
         setSize(60)
-        Message.Text = "Whitelist Verification."
+        Message.Text = "Hello ".. game.Players.LocalPlayer.DisplayName
         wait(1)
         setSize(80)
-        
-        Message.Text = game.Players.LocalPlayer.DisplayName.." | Whitelist"
-        wait(.5)
+        Message.Text = "Waiting for Library"
+        wait(.9)
         setSize(100)
         
         createTween(Bar,{BackgroundTransparency = 1}, {
@@ -216,27 +216,284 @@ function ZexoLib:AddIntro(text2)
             Style = Enum.EasingStyle.Linear,
             Direction = Enum.EasingDirection.In,
             TIME = .4
-        }).Completed:Wait(2) 
+        }).Completed:Wait(1) 
+            Loader.Visible = false
 end
 
-function ZexoLib:AddWindow(text)
-    local _add = Instance.new("ScreenGui")
+function Dino:Notify(z, e, u)
+local isExistance = false
+local Notifyt = Instance.new("ScreenGui")
+local NotificationParent = Instance.new("ScrollingFrame")
+local UIListLayout = Instance.new("UIListLayout")
+local UIPadding = Instance.new("UIPadding")
+local Notification = Instance.new("Frame")
+local Container = Instance.new("ImageButton")
+local Top = Instance.new("ImageLabel")
+local Exit = Instance.new("Frame")
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+local Icon = Instance.new("ImageLabel")
+local Button = Instance.new("TextButton")
+local Title = Instance.new("TextLabel")
+local Accent = Instance.new("Frame")
+local Body = Instance.new("Frame")
+local Content = Instance.new("TextLabel")
+local UIPadding_2 = Instance.new("UIPadding")
+local UISizeConstraint = Instance.new("UISizeConstraint")
+
+if game.CoreGui:FindFirstChild("Notifyt") then
+	isExistance = true
+	Notifyt = game.CoreGui.Notifyt
+	NotificationParent = Notifyt.NotificationParent
+	Notification = Notifyt.Notification
+end
+
+Notifyt.Name = "Notifyt"
+Notifyt.Parent = game.CoreGui
+Notifyt.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+Notifyt.ResetOnSpawn = false
+
+NotificationParent.Name = "NotificationParent"
+NotificationParent.Parent = Notifyt
+NotificationParent.AnchorPoint = Vector2.new(1, 0)
+NotificationParent.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+NotificationParent.BackgroundTransparency = 1.000
+NotificationParent.BorderSizePixel = 0
+NotificationParent.ClipsDescendants = false
+NotificationParent.Position = UDim2.new(1, 0, 0, -25)
+NotificationParent.Selectable = false
+NotificationParent.Size = UDim2.new(0, 275, 1, 0)
+NotificationParent.CanvasSize = UDim2.new(0, 0, 0, 0)
+NotificationParent.ScrollBarThickness = 0
+NotificationParent.ScrollingEnabled = false
+
+UIListLayout.Parent = NotificationParent
+UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Right
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout.VerticalAlignment = Enum.VerticalAlignment.Bottom
+UIListLayout.Padding = UDim.new(0, 5)
+
+UIPadding.Parent = NotificationParent
+UIPadding.PaddingRight = UDim.new(0, 25)
+
+Notification.Name = "Notification"
+Notification.Parent = Notifyt
+Notification.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Notification.BackgroundTransparency = 1.000
+Notification.BorderSizePixel = 0
+Notification.Position = UDim2.new(1, 0, 0, 0)
+Notification.Size = UDim2.new(0, 250, 0, 0)
+Notification.Visible = false
+
+Container.Name = "Container"
+Container.Parent = Notification
+Container.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Container.BackgroundTransparency = 0.000
+Container.BorderSizePixel = 0
+Container.Position = UDim2.new(1.14999998, 0, 0, 0)
+Container.Size = UDim2.new(1, 0, 0, 0)
+Container.Image = "rbxassetid://6296184185"
+Container.ImageColor3 = Color3.fromRGB(0, 0, 0)
+Container.ImageTransparency = 1.000
+Container.ScaleType = Enum.ScaleType.Slice
+Container.SliceCenter = Rect.new(512, 512, 512, 512)
+Container.SliceScale = 0.012
+
+Top.Name = "Top"
+Top.Parent = Container
+Top.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Top.BackgroundTransparency = 0.000
+Top.BorderSizePixel = 0
+Top.Size = UDim2.new(1, 0, 0, 32)
+Top.ZIndex = 3
+Top.Image = "rbxassetid://6276641225"
+Top.ImageColor3 = Color3.fromRGB(0, 0, 0)
+Top.ImageTransparency = 0.000
+Top.ScaleType = Enum.ScaleType.Slice
+Top.SliceCenter = Rect.new(256, 256, 256, 256)
+Top.SliceScale = 0.022
+
+Exit.Name = "Exit"
+Exit.Parent = Top
+Exit.AnchorPoint = Vector2.new(1, 0)
+Exit.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Exit.BackgroundTransparency = 1.000
+Exit.BorderColor3 = Color3.fromRGB(24, 42, 53)
+Exit.BorderSizePixel = 0
+Exit.ClipsDescendants = true
+Exit.LayoutOrder = 3
+Exit.Position = UDim2.new(1, 0, 0, 0)
+Exit.Size = UDim2.new(1, 0, 1, 0)
+
+UIAspectRatioConstraint.Parent = Exit
+
+Icon.Name = "Icon"
+Icon.Parent = Exit
+Icon.AnchorPoint = Vector2.new(0.5, 0.5)
+Icon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Icon.BackgroundTransparency = 1.000
+Icon.BorderSizePixel = 0
+Icon.Position = UDim2.new(0.5, 0, 0.5, 0)
+Icon.Size = UDim2.new(0.5, 0, 0.5, 0)
+Icon.Image = "http://www.roblox.com/asset/?id=6415685859"
+Icon.ImageColor3 = _G.Color
+Icon.ScaleType = Enum.ScaleType.Fit
+
+Button.Name = "Button"
+Button.Parent = Exit
+Button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Button.BackgroundTransparency = 1.000
+Button.BorderSizePixel = 0
+Button.Size = UDim2.new(1, 0, 1, 0)
+Button.ZIndex = 2
+Button.Font = Enum.Font.SourceSans
+Button.Text = ""
+Button.TextColor3 = Color3.fromRGB(0, 0, 0)
+Button.TextSize = 14.000
+
+Title.Name = "Title"
+Title.Parent = Top
+Title.AnchorPoint = Vector2.new(1, 0)
+Title.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Title.BackgroundTransparency = 1.000
+Title.BorderSizePixel = 0
+Title.Position = UDim2.new(1, 0, 0, 0)
+Title.Size = UDim2.new(1, -12, 1, 0)
+Title.Font = Enum.Font.GothamSemibold
+Title.Text = "Notification"
+Title.TextColor3 = _G.Color
+Title.TextSize = 14.000
+Title.TextWrapped = true
+Title.TextXAlignment = Enum.TextXAlignment.Left
+
+Accent.Name = "Accent"
+Accent.Parent = Top
+Accent.AnchorPoint = Vector2.new(0, 1)
+Accent.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Accent.BackgroundTransparency = 0.600
+Accent.BorderSizePixel = 0
+Accent.Position = UDim2.new(0, 0, 1, 0)
+Accent.Size = UDim2.new(1, 0, 0, 1)
+
+Body.Name = "Body"
+Body.Parent = Container
+Body.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Body.BackgroundTransparency = 1.000
+Body.BorderSizePixel = 0
+Body.ClipsDescendants = true
+Body.Position = UDim2.new(0, 0, 0, 32)
+Body.Size = UDim2.new(1, 0, 0, 0)
+
+Content.Name = "Content"
+Content.Parent = Body
+Content.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Content.BackgroundTransparency = 1.000
+Content.BorderSizePixel = 0
+Content.Size = UDim2.new(1, 0, 1, 0)
+Content.Font = Enum.Font.Gotham
+Content.Text = "Message Here. This is an example message prompt."
+Content.TextColor3 = _G.Color
+Content.TextSize = 14.000
+Content.TextWrapped = true
+Content.TextXAlignment = Enum.TextXAlignment.Left
+Content.TextYAlignment = Enum.TextYAlignment.Top
+
+UIPadding_2.Parent = Body
+UIPadding_2.PaddingBottom = UDim.new(0, 12)
+UIPadding_2.PaddingLeft = UDim.new(0, 12)
+UIPadding_2.PaddingRight = UDim.new(0, 12)
+UIPadding_2.PaddingTop = UDim.new(0, 12)
+
+UISizeConstraint.Parent = Container
+UISizeConstraint.MaxSize = Vector2.new(math.huge, 120)
+
+Notification.AutomaticSize = Enum.AutomaticSize.Y
+Container.AutomaticSize = Enum.AutomaticSize.Y
+Body.AutomaticSize = Enum.AutomaticSize.Y
+
+-- remove clones: 
+
+if isExistance then
+	UIListLayout:Destroy()
+	UIPadding:Destroy()
+	Container:Destroy()
+end
+
+local T = game:GetService('TweenService')
+local t = TweenInfo.new(0.5, Enum.EasingStyle.Quint)
+local tp = NotificationParent
+
+function prompt(title, text, closeTime, close)
+	local Prompt = Notification:Clone()
+	local Sound = Instance.new('Sound', Notification)
+
+	Prompt.Visible = true
+	Prompt.Container.Top.Title.Text = title
+	Prompt.Container.Body.Content.Text = text
+
+	Prompt.Parent = NotificationParent
+	Sound.SoundId = "rbxassetid://6518811702"
+	Sound:Play()
+
+	T:Create(Prompt.Container, t, {Position = UDim2.new(0, 0, 0, 0)}):Play()
+
+	-- auto size
+	Prompt.AutomaticSize = Enum.AutomaticSize.Y
+	Prompt.Container.AutomaticSize = Enum.AutomaticSize.Y
+	Prompt.Container.Body.AutomaticSize = Enum.AutomaticSize.Y
+	Prompt.Container.Body.Content.AutomaticSize = Enum.AutomaticSize.Y
+
+	Prompt.Container.Top.Exit.Button.MouseButton1Click:Connect(function()
+		T:Create(Prompt.Container, t, {Position = UDim2.new(1.15, 0, 0, 0)}):Play()
+		wait(0.48)
+		Prompt:Destroy()
+	end)
+	
+	Prompt.Container.Top.Exit.Visible = close
+
+	wait(1)
+
+	Sound:Destroy()
+	
+	spawn(function()
+		if typeof(closeTime) == "number" then
+			task.wait(closeTime)
+			local s = pcall(function()
+				T:Create(Prompt.Container, t, {Position = UDim2.new(1.15, 0, 0, 0)}):Play()
+				wait(0.48)
+				Prompt:Destroy()
+			end)
+			if not s then
+				print('Already closed.')
+			end
+		end
+	end)
+end
+local lib = {
+    
+} 
+function lib.prompt(title, description, closeTime)
+    prompt(title, description, closeTime, true)
+end
+lib.prompt(z,e,u)
+return lib
+end 
+
+function Dino:AddWindow(text, dinotitle)
+    local DinoUI = Instance.new("ScreenGui")
     local Window = Instance.new("Frame")
-    local HubText1 = Instance.new("TextLabel")
+    local DinoHubText1 = Instance.new("TextLabel")
     local DinoHubText2 = Instance.new("TextButton")
     local WindowText = Instance.new("TextButton")
     local TabWindow = Instance.new("ScrollingFrame")
     local TabWindowList = Instance.new("UIListLayout")
     local ContainerHolder = Instance.new("Frame")
     
-    --Properties:
-    
-    _add.Name = "Zexo"
-    _add.Parent = game.CoreGui
-    _add.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+    DinoUI.Name = "DinoUI"
+    DinoUI.Parent = game.CoreGui
+    DinoUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
     
     Window.Name = "Window"
-    Window.Parent = _add
+    Window.Parent = DinoUI
     Window.AnchorPoint = Vector2.new(0.5, 0.5)
     Window.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
     Window.BorderSizePixel = 0
@@ -244,18 +501,18 @@ function ZexoLib:AddWindow(text)
     Window.Size = UDim2.new(0, 0, 0, 0)
     Window.ClipsDescendants = true
     
-    HubText1.Name = "HubText1"
-    HubText1.Parent = Window
-    HubText1.BackgroundColor3 = Color3.fromRGB(0, 255, 155)
-    HubText1.BackgroundTransparency = 1.000
-    HubText1.BorderSizePixel = 0
-    HubText1.Position = UDim2.new(0, 7, 0, 0)
-    HubText1.Size = UDim2.new(0, 35, 0, 20)
-    HubText1.Font = Enum.Font.GothamSemibold
-    HubText1.Text = text
-    HubText1.TextColor3 = _G.Color
-    HubText1.TextSize = 13.000
-    HubText1.TextXAlignment = Enum.TextXAlignment.Left 
+    DinoHubText1.Name = "DinoHubText1"
+    DinoHubText1.Parent = Window
+    DinoHubText1.BackgroundColor3 = Color3.fromRGB(0, 255, 155)
+    DinoHubText1.BackgroundTransparency = 1.000
+    DinoHubText1.BorderSizePixel = 0
+    DinoHubText1.Position = UDim2.new(0, 7, 0, 0)
+    DinoHubText1.Size = UDim2.new(0, 35, 0, 20)
+    DinoHubText1.Font = Enum.Font.GothamSemibold
+    DinoHubText1.Text = text
+    DinoHubText1.TextColor3 = _G.Color
+    DinoHubText1.TextSize = 13.000
+    DinoHubText1.TextXAlignment = Enum.TextXAlignment.Left 
     
     DinoHubText2.Name = "DinoHubText2"
     DinoHubText2.Parent = Window
@@ -361,9 +618,9 @@ function ZexoLib:AddWindow(text)
         end
     end)
 
-    local ZexoWindow = {}
+    local DinoWindow = {}
 
-    function ZexoWindow:NewPage(pagetitle)
+    function DinoWindow:NewPage(pagetitle)
         local Container = Instance.new("ScrollingFrame")
         local ContainerList = Instance.new("UIListLayout")
         
@@ -430,9 +687,9 @@ function ZexoLib:AddWindow(text)
             Container.Visible = true
         end)
 
-        local ZexoPage = {}
+        local DinoPage = {}
 
-        function ZexoPage:NewSection(sectiontitle)
+        function DinoPage:NewSection(sectiontitle)
             local Section = Instance.new("Frame")
             local SectionTitle = Instance.new("TextLabel")
             local SectionIn = Instance.new("Frame")
@@ -500,9 +757,9 @@ function ZexoLib:AddWindow(text)
                 sectionsizechange()
             end)
 
-            local Element = {}
+            local DinoElement = {}
 
-            function Element:Button(buttontitle, buttoncallback)
+            function DinoElement:Button(buttontitle, buttoncallback)
                 local ButtonHolder = Instance.new("TextButton")
                 local ButtonHolderUICorner = Instance.new("UICorner")
                 local ButtonHolderUIStroke = Instance.new("UIStroke")
@@ -566,7 +823,7 @@ function ZexoLib:AddWindow(text)
 
             end
 
-            function Element:Toggle(toggletitle, togglecallback)
+            function DinoElement:Toggle(toggletitle, togglecallback)
                 local ToggleHolder = Instance.new("Frame")
                 local ToggleHolderUICorner = Instance.new("UICorner")
                 local ToggleImage = Instance.new("ImageLabel")
@@ -692,7 +949,7 @@ function ZexoLib:AddWindow(text)
                 
             end
 
-        function Element:Slider(name, minx, maxx, start, options, callback)
+        function DinoElement:Slider(name, minx, maxx, start, options, callback)
             local SliderMainText = name
             callback = callback or function() end	
 
@@ -888,7 +1145,7 @@ function ZexoLib:AddWindow(text)
 
         end                
     
-            function Element:Textbox(textboxtitle, textboxplaceholdertitle,textboxcallback)
+            function DinoElement:Textbox(textboxtitle, textboxplaceholdertitle,textboxcallback)
                 local TextBoxToggle = Instance.new("Frame")
                 local TextBoxToggleUICorner = Instance.new("UICorner")
                 local TextBoxImage = Instance.new("ImageLabel")
@@ -959,7 +1216,7 @@ function ZexoLib:AddWindow(text)
                 end)
             end
 
-            function Element:Dropdown(dropdowntitle, list, dropdowncallback)
+            function DinoElement:Dropdown(dropdowntitle, list, dropdowncallback)
                 list = list or {}
 
                 local DropdownHolder = Instance.new("Frame")
@@ -1090,9 +1347,17 @@ function ZexoLib:AddWindow(text)
                     
                 end
 
-                local NewDropdown = {}
+                local DinoDropdown = {}
+
+                function DinoDropdown:Clear()
+                    for i, v in pairs(DropdownIn:GetChildren()) do
+                        if v:IsA("TextButton") and v.Name == "ListButton" then
+                            v:Destroy() 
+                     end
+                 end
+            end
                 
-                function NewDropdown:Refresh(newlist)
+                function DinoDropdown:Refresh(newlist)
                     newlist = newlist or {}
                     for _, alllist in pairs(DropdownIn:GetChildren()) do
                         if alllist:IsA("TextButton") then
@@ -1107,13 +1372,13 @@ function ZexoLib:AddWindow(text)
                         
                         ListButton.Name = newlistvalue or "ListButton"
                         ListButton.Parent = DropdownIn
-                        ListButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+                        ListButton.BackgroundColor3 = Color3.fromRGB(39, 86, 144)
                         ListButton.BorderSizePixel = 0
                         ListButton.Size = UDim2.new(0, 350, 0, 25)
                         ListButton.AutoButtonColor = false
                         ListButton.Font = Enum.Font.GothamSemibold
                         ListButton.Text = newlistvalue or "List"
-                        ListButton.TextColor3 = _G.Color
+                        ListButton.TextColor3 = Color3.fromRGB(180, 180, 180)
                         ListButton.TextSize = 14.000
     
                         ListButton.MouseButton1Click:Connect(function()
@@ -1126,10 +1391,10 @@ function ZexoLib:AddWindow(text)
                     end
                 end
 
-                return NewDropdown
+                return DinoDropdown
             end
 
-            function NewElement:Label(labeltitle)
+            function DinoElement:Label(labeltitle)
                 local DropdownHolderTitle = Instance.new("TextLabel")
 
                 --Properties:
@@ -1147,22 +1412,18 @@ function ZexoLib:AddWindow(text)
                 DropdownHolderTitle.TextSize = 13.000
                 DropdownHolderTitle.TextXAlignment = Enum.TextXAlignment.Left
 
-                local DLabel = {}
+                local DinoLabel = {}
 
-                function DLabel:Set(newlabeltitle)
+                function DinoLabel:Set(newlabeltitle)
                     DropdownHolderTitle.Text = newlabeltitle
                 end
 
-                return DLabel
+                return DinoLabel
             end
-
-            return Element
+            return DinoElement
         end
-        
-        return ZexoPage
+        return DinoPage
     end
-
-    return ZexoWindow
-
+    return DinoWindow
 end
-return ZexoLib
+return Dino
