@@ -1578,7 +1578,7 @@ function Library:CreateTab(name)
                     NameButton.TextColor3 = Color3.new(255,255,255) 
                 end
 
-                NameButton.MouseButton1Down:Connect(function()
+                NameButton.MouseButton1Click:Connect(function()
                     SelectedOption = v
                     ResetAllDropdownItems()
                     TitleToggle.Text = (name .. " - " .. SelectedOption)
@@ -1599,7 +1599,7 @@ function Library:CreateTab(name)
                 end)
             end
             
-            TitleToggle.MouseButton1Down:Connect(function()
+            TitleToggle.MouseButton1Click:Connect(function()
                 DropdownToggled = not DropdownToggled
             
                 if DropdownToggled then
@@ -1639,7 +1639,7 @@ function Library:CreateTab(name)
                         NameButton.TextColor3 = Library.Theme.MainColor
                     end
     
-                    NameButton.MouseButton1Down:Connect(function()
+                    NameButton.MouseButton1Click:Connect(function()
                         SelectedOption = v
                         ResetAllDropdownItems()
                         TitleToggle.Text = (name .. " - " .. SelectedOption)
