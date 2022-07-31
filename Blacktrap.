@@ -16,16 +16,16 @@ _G.WindowBackgroundColor = Color3.fromRGB(12,12,12)
 _G.BackgroundItemColor = Color3.fromRGB(20, 20, 20)
 _G.TabWindowColor = Color3.fromRGB(30, 30, 30)
 _G.ContainerColor = Color3.fromRGB(30, 30, 30)
-_G.TitleTextColor = Color3.fromRGB(150, 150, 150)
-_G.ImageColor = Color3.fromRGB(150, 150, 150)
-_G.LineThemeColor = Color3.fromRGB(150, 150, 150)
-_G.TabTextColor = Color3.fromRGB(150, 150, 150)
-_G.TabImageColor = Color3.fromRGB(150, 150, 150)
-_G.TabThemeColor = Color3.fromRGB(250, 0, 0)
-_G.SectionColor = Color3.fromRGB(150, 150, 150)
-_G.SectionImageColor = Color3.fromRGB(150, 150, 150)
-_G.SectionTextColor = Color3.fromRGB(150, 150, 150)
-_G.SectionOn = Color3.fromRGB(0, 250, 0)
+_G.TitleTextColor = Color3.fromRGB(255, 255, 0)
+_G.ImageColor = Color3.fromRGB(255, 255, 0)
+_G.LineThemeColor = Color3.fromRGB(255, 255, 0)
+_G.TabTextColor = Color3.fromRGB(255, 255, 0)
+_G.TabImageColor = Color3.fromRGB(255, 255, 0)
+_G.TabThemeColor = Color3.fromRGB(255, 255, 0)
+_G.SectionColor = Color3.fromRGB(255, 255, 0)
+_G.SectionImageColor = Color3.fromRGB(255, 255, 0)
+_G.SectionTextColor = Color3.fromRGB(255, 255, 0)
+_G.SectionOn = Color3.fromRGB(255, 255, 0)
 
 function Blacklib:Window(text)
     local osfunc = {}
@@ -76,7 +76,7 @@ function Blacklib:Window(text)
     WindowStroke.Name = "WindowStroke"
     WindowStroke.Parent = WindowFrame
     WindowStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-    WindowStroke.Color = Color3.fromRGB(120,120,120)
+    WindowStroke.Color = Color3.fromRGB(255, 255, 0)
     WindowStroke.LineJoinMode = Enum.LineJoinMode.Round
     WindowStroke.Thickness = 1
     WindowStroke.Transparency = 0
@@ -92,7 +92,7 @@ function Blacklib:Window(text)
     PlayTime.Font = Enum.Font.Code
     PlayTime.Text = ""
     PlayTime.TextSize = 13.000
-    PlayTime.TextColor3 = Color3.fromRGB(180,180,180)
+    PlayTime.TextColor3 = Color3.fromRGB(255, 255, 0)
     PlayTime.TextXAlignment = Enum.TextXAlignment.Center
     
     PlayTimeCorner.Name = "PlayTimeCorner"
@@ -106,17 +106,17 @@ function Blacklib:Window(text)
     BlackImage.Position = UDim2.new(0, 3, 0, 3)
     BlackImage.Size = UDim2.new(0, 25, 0, 25)
     BlackImage.Image = ""
-    BlackImage.ImageColor3 = Color3.fromRGB(0,220,0)
+    BlackImage.ImageColor3 = Color3.fromRGB(255, 255, 0)
     
     BlackTitle.Name = "BlackTitle"
     BlackTitle.Parent = WindowFrame
     BlackTitle.BackgroundColor3 = _G.WindowBackgroundColor
     BlackTitle.BackgroundTransparency = 1.000
-    BlackTitle.Position = UDim2.new(0, 33, 0, 3)
+    BlackTitle.Position = UDim2.new(0, 13, 0, 3)
     BlackTitle.Size = UDim2.new(0, 50, 0, 25)
     BlackTitle.Font = Enum.Font.GothamBold
     BlackTitle.Text = text
-    BlackTitle.TextColor3 = Color3.fromRGB(180,180,180)
+    BlackTitle.TextColor3 = Color3.fromRGB(255, 255, 0)
     BlackTitle.TextSize = 13.000
     BlackTitle.TextXAlignment = Enum.TextXAlignment.Left
     
@@ -128,7 +128,7 @@ function Blacklib:Window(text)
     Space.Size = UDim2.new(0, 10, 0, 25)
     Space.Font = Enum.Font.GothamBold
     Space.Text = "|"
-    Space.TextColor3 = Color3.fromRGB(0,150,0)
+    Space.TextColor3 = Color3.fromRGB(255, 255, 0)
     Space.TextSize = 18.000
     
     ServerTime.Name = "ServerTime"
@@ -140,7 +140,7 @@ function Blacklib:Window(text)
     ServerTime.Font = Enum.Font.Code
     ServerTime.Text = ""
     ServerTime.TextSize = 13.000
-    ServerTime.TextColor3 = Color3.fromRGB(180,180,180)
+    ServerTime.TextColor3 = Color3.fromRGB(255, 255, 0) 
     ServerTime.TextXAlignment = Enum.TextXAlignment.Left
     
     Space2.Name = "Space2"
@@ -151,7 +151,7 @@ function Blacklib:Window(text)
     Space2.Size = UDim2.new(0, 10, 0, 25)
     Space2.Font = Enum.Font.GothamBold
     Space2.Text = "|"
-    Space2.TextColor3 = Color3.fromRGB(0,150,0)
+    Space2.TextColor3 = Color3.fromRGB(255, 255, 0)
     Space2.TextSize = 18.000
     
     Pinged.Name = "Pinged"
@@ -163,7 +163,7 @@ function Blacklib:Window(text)
     Pinged.Font = Enum.Font.Code
     Pinged.Text = ""
     Pinged.TextSize = 13.000
-    Pinged.TextColor3 = Color3.fromRGB(180,180,180)
+    Pinged.TextColor3 = Color3.fromRGB(255, 255, 0)
     Pinged.TextXAlignment = Enum.TextXAlignment.Left
     
     CloseButton.Name = "CloseButton"
@@ -174,7 +174,7 @@ function Blacklib:Window(text)
     CloseButton.Position = UDim2.new(0, 525, 0, 3)
     CloseButton.Size = UDim2.new(0, 25, 0, 25)
     CloseButton.Font = Enum.Font.Gotham
-    CloseButton.TextColor3 = Color3.fromRGB(0, 200, 0)
+    CloseButton.TextColor3 = Color3.fromRGB(255, 255, 0)
     CloseButton.Text = "×"
     CloseButton.Rotation = 0
     CloseButton.TextSize = 25.000
@@ -404,7 +404,7 @@ function Blacklib:Window(text)
         NotifHolderUIStroke.Name = "NotifHolderUIStroke"
         NotifHolderUIStroke.Parent = NotificationFrame
         NotifHolderUIStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-        NotifHolderUIStroke.Color = Color3.fromRGB(180,180,180)
+        NotifHolderUIStroke.Color = Color3.fromRGB(255, 255, 0)
         NotifHolderUIStroke.LineJoinMode = Enum.LineJoinMode.Round
         NotifHolderUIStroke.Thickness = 0.5
         NotifHolderUIStroke.Transparency = 0
@@ -413,7 +413,7 @@ function Blacklib:Window(text)
         
         OkayBtn.Name = "OkayBtn"
         OkayBtn.Parent = NotificationFrame
-        OkayBtn.BackgroundColor3 = Color3.fromRGB(190, 190, 190)
+        OkayBtn.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
         OkayBtn.BorderSizePixel = 1
         OkayBtn.BorderColor3 = _G.SectionColor
         OkayBtn.Position = UDim2.new(0, 125, 0, 190)
@@ -447,12 +447,12 @@ function Blacklib:Window(text)
         NotificationTitle.ZIndex = 3
         NotificationTitle.Font = Enum.Font.Code
         NotificationTitle.Text = titledesc or "Notification"
-        NotificationTitle.TextColor3 = Color3.fromRGB(180,180,180)
+        NotificationTitle.TextColor3 = Color3.fromRGB(255, 255, 0)
         NotificationTitle.TextSize = 20.000
         
         Line.Name = "Line"
         Line.Parent = NotificationFrame
-        Line.BackgroundColor3 = Color3.fromRGB(180,180,180)
+        Line.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
         Line.BorderSizePixel = 0
         Line.Position = UDim2.new(0, 5, 0, 43)
         Line.Size = UDim2.new(0, 390, 0, 1)
@@ -465,7 +465,7 @@ function Blacklib:Window(text)
         NotificationDesc.Size = UDim2.new(0, 380, 0, 100)
         NotificationDesc.Font = Enum.Font.Code
         NotificationDesc.Text = textdesc
-        NotificationDesc.TextColor3 = Color3.fromRGB(180,180,180)
+        NotificationDesc.TextColor3 = Color3.fromRGB(255, 255, 0)
         NotificationDesc.TextSize = 16.000
         NotificationDesc.TextWrapped = true
         NotificationDesc.TextXAlignment = Enum.TextXAlignment.Center
@@ -517,7 +517,7 @@ function Blacklib:Window(text)
         TabFrame.Size = UDim2.new(0, 150, 0, 30)
         TabFrame.Font = Enum.Font.Code
         TabFrame.Text = ""
-        TabFrame.TextColor3 = Color3.fromRGB(180,180,180)
+        TabFrame.TextColor3 = Color3.fromRGB(255, 255, 0)
         TabFrame.TextSize = 15.000
         
         TabCorner.Name = tabtitle or "TabCorner"
@@ -531,7 +531,7 @@ function Blacklib:Window(text)
         TabImage.Position = UDim2.new(0, 3, 0, 4)
         TabImage.Size = UDim2.new(0, 20, 0, 20)
         TabImage.Image = img or ""
-        TabImage.ImageColor3 = Color3.fromRGB(200,200,200)
+        TabImage.ImageColor3 = Color3.fromRGB(255, 255, 0)
         
         TabTitle.Name = tabtitle or "TabTitle"
         TabTitle.Parent = TabFrame
@@ -542,7 +542,7 @@ function Blacklib:Window(text)
         TabTitle.Size = UDim2.new(0, 150, 0, 25)
         TabTitle.Font = Enum.Font.Code
         TabTitle.Text = tabtitle or "Put Tab Title"
-        TabTitle.TextColor3 = Color3.fromRGB(180,180,180)
+        TabTitle.TextColor3 = Color3.fromRGB(255, 255, 0)
         TabTitle.TextSize = 13.000
         TabTitle.TextXAlignment = Enum.TextXAlignment.Left
         
@@ -592,7 +592,7 @@ function Blacklib:Window(text)
                 end
             end
             game.TweenService:Create(TabFrame, TweenInfo.new(.1, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut), 
-                {BackgroundColor3 = Color3.fromRGB(0,200,0)}
+                {BackgroundColor3 = Color3.fromRGB(255, 255, 0)}
                 ):Play()
             game.TweenService:Create(TabFrame, TweenInfo.new(.1, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut),
                 {BackgroundTransparency = 0.9}
@@ -695,13 +695,13 @@ function Blacklib:Window(text)
                 Button.Size = UDim2.new(0, 305, 0, 25)
                 Button.Font = Enum.Font.Code
                 Button.Text = buttontitle
-                Button.TextColor3 = Color3.fromRGB(180,180,180)
+                Button.TextColor3 = Color3.fromRGB(255, 255, 0)
                 Button.TextSize = 12.000
                 
                 UIStroke.Name = "UIStroke"
                 UIStroke.Parent = Button
                 UIStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-                UIStroke.Color = Color3.fromRGB(180,180,180)
+                UIStroke.Color = Color3.fromRGB(255, 255, 0)
                 UIStroke.LineJoinMode = Enum.LineJoinMode.Round
                 UIStroke.Thickness = 0.5
                 UIStroke.Transparency = 0
@@ -757,12 +757,12 @@ function Blacklib:Window(text)
                     if callBackDebounce then
                         mouseleft = false
                         game.TweenService:Create(UIStroke, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut),{
-                            Color = Color3.fromRGB(70,70,70)
+                            Color = Color3.fromRGB(255, 255, 0)
                         }):Play()
                     else
                         mouseleft = false
                         game.TweenService:Create(UIStroke, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut),{
-                            Color = Color3.fromRGB(90,90,90)
+                            Color = Color3.fromRGB(255, 255, 0)
                         }):Play()
                     end
                 end)
@@ -774,7 +774,7 @@ function Blacklib:Window(text)
                             TextSize = 12
                         }):Play()
                         game.TweenService:Create(UIStroke, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut),{
-                            Color = Color3.fromRGB(180,180,180)
+                            Color = Color3.fromRGB(255, 255, 0)
                         }):Play()
                     else
                         mouseleft = true
@@ -783,7 +783,7 @@ function Blacklib:Window(text)
                             TextSize = 12
                         }):Play()
                         game.TweenService:Create(UIStroke, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut),{
-                            Color = Color3.fromRGB(180,180,180)
+                            Color = Color3.fromRGB(255, 255, 0)
                         }):Play()
                     end
                 end)
@@ -839,7 +839,7 @@ function Blacklib:Window(text)
                 ImageLabel.Position = UDim2.new(0, 5, 0, 6)
                 ImageLabel.Size = UDim2.new(0, 18, 0, 18)
                 ImageLabel.Image = "rbxassetid://8825010231"
-                ImageLabel.ImageColor3 = Color3.fromRGB(180,180,180)
+                ImageLabel.ImageColor3 = Color3.fromRGB(255, 255, 0)
                 
                 Space.Name = "Space"
                 Space.Parent = CheckFrame2
@@ -850,7 +850,7 @@ function Blacklib:Window(text)
                 Space.Font = Enum.Font.GothamSemibold
                 Space.Text = "|"
                 Space.TextSize = 13.000
-                Space.TextColor3 = Color3.fromRGB(180,180,180)
+                Space.TextColor3 = Color3.fromRGB(255, 255, 0)
                 Space.TextXAlignment = Enum.TextXAlignment.Center
             
                 Title.Name = "Title"
@@ -861,7 +861,7 @@ function Blacklib:Window(text)
                 Title.Size = UDim2.new(0, 280, 0, 30)
                 Title.Font = Enum.Font.Code
                 Title.Text = TogInfo or "checkBox Title"
-                Title.TextColor3 = Color3.fromRGB(180,180,180)
+                Title.TextColor3 = Color3.fromRGB(255, 255, 0)
                 Title.TextSize = 12.000
                 Title.TextXAlignment = Enum.TextXAlignment.Left
             
@@ -873,7 +873,7 @@ function Blacklib:Window(text)
                 ImageButton.Size = UDim2.new(0, 23, 0, 23)
                 ImageButton.ZIndex = 2
                 ImageButton.Image = "rbxassetid://3926311105"
-                ImageButton.ImageColor3 = Color3.fromRGB(180,180,180)
+                ImageButton.ImageColor3 = Color3.fromRGB(255, 255, 0)
                 ImageButton.ImageRectOffset = Vector2.new(940, 784)
                 ImageButton.ImageRectSize = Vector2.new(48, 48)
                 
@@ -881,7 +881,7 @@ function Blacklib:Window(text)
                 if default == true then
                     ImageButton.ImageRectOffset = Vector2.new(4, 836)
                     game.TweenService:Create(ImageButton, TweenInfo.new(0.08, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut),
-                        {ImageColor3 = Color3.fromRGB(0,255,0)}
+                        {ImageColor3 = Color3.fromRGB(255, 255, 0)}
                         ):Play()
                     toggle = not toggle
                     pcall(callback, toggle)
@@ -890,12 +890,12 @@ function Blacklib:Window(text)
                 ImageButton.MouseButton1Click:Connect(function()
                     if toggle == false then
                         game.TweenService:Create(ImageButton, TweenInfo.new(0.08, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut),
-                            {ImageColor3 = Color3.fromRGB(0,255,0)}
+                            {ImageColor3 = Color3.fromRGB(255, 255, 0)}
                             ):Play()
                         ImageButton.ImageRectOffset = Vector2.new(4, 836)
                     else
                         game.TweenService:Create(ImageButton, TweenInfo.new(0.08, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut),
-                            {ImageColor3 = Color3.fromRGB(180,180,180)}
+                            {ImageColor3 = Color3.fromRGB(255, 255, 0)}
                             ):Play()
                         ImageButton.ImageRectOffset = Vector2.new(940, 784)
                     end
@@ -941,7 +941,7 @@ function Blacklib:Window(text)
                 UIStroke.Name = "UIStroke"
                 UIStroke.Parent = Frame
                 UIStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-                UIStroke.Color = Color3.fromRGB(180,180,180)
+                UIStroke.Color = Color3.fromRGB(255, 255, 0)
                 UIStroke.LineJoinMode = Enum.LineJoinMode.Round
                 UIStroke.Thickness = 0.5
                 UIStroke.Transparency = 0
@@ -967,7 +967,7 @@ function Blacklib:Window(text)
                 ImageLabel.Position = UDim2.new(0, 5, 0, 6)
                 ImageLabel.Size = UDim2.new(0, 18, 0, 18)
                 ImageLabel.Image = "rbxassetid://8825005073"
-                ImageLabel.ImageColor3 = Color3.fromRGB(180,180,180)
+                ImageLabel.ImageColor3 = Color3.fromRGB(255, 255, 0)
                 
                 Space.Name = "Space"
                 Space.Parent = DropCover
@@ -978,7 +978,7 @@ function Blacklib:Window(text)
                 Space.Font = Enum.Font.GothamSemibold
                 Space.Text = "|"
                 Space.TextSize = 13.000
-                Space.TextColor3 = Color3.fromRGB(180,180,180)
+                Space.TextColor3 = Color3.fromRGB(255, 255, 0)
                 Space.TextXAlignment = Enum.TextXAlignment.Center
             
                 Title.Name = "Title"
@@ -989,7 +989,7 @@ function Blacklib:Window(text)
                 Title.Size = UDim2.new(0, 280, 0, 30)
                 Title.Font = Enum.Font.Code
                 Title.Text = droptitle or "drop Title"
-                Title.TextColor3 = Color3.fromRGB(180,180,180)
+                Title.TextColor3 = Color3.fromRGB(255, 255, 0)
                 Title.TextSize = 12.000
                 Title.TextXAlignment = Enum.TextXAlignment.Left
             
@@ -1000,7 +1000,7 @@ function Blacklib:Window(text)
                 ImageButton.Position = UDim2.new(0, 352, 0, 7)
                 ImageButton.Size = UDim2.new(0, 23, 0, 18)
                 ImageButton.Image = "rbxassetid://8530745436"
-                ImageButton.ImageColor3 = Color3.fromRGB(180,180,180)
+                ImageButton.ImageColor3 = Color3.fromRGB(255, 255, 0)
                 ImageButton.Rotation = 180
                 
                 DropTextList.Name = "DropTextList"
@@ -1011,7 +1011,7 @@ function Blacklib:Window(text)
                 DropTextList.Size = UDim2.new(0, 375, 0, 25)
                 DropTextList.Font = Enum.Font.Code
                 DropTextList.Text = v or "None..."
-                DropTextList.TextColor3 = Color3.fromRGB(180,180,180)
+                DropTextList.TextColor3 = Color3.fromRGB(255, 255, 0)
                 DropTextList.TextSize = 12.000
                 DropTextList.TextXAlignment = Enum.TextXAlignment.Center
                 
@@ -1021,7 +1021,7 @@ function Blacklib:Window(text)
                 DropStrokeList.Name = "DropStrokeList"
                 DropStrokeList.Parent = DropTextList
                 DropStrokeList.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-                DropStrokeList.Color = Color3.fromRGB(180,180,180)
+                DropStrokeList.Color = Color3.fromRGB(255, 255, 0)
                 DropStrokeList.LineJoinMode = Enum.LineJoinMode.Round
                 DropStrokeList.Thickness = 0.2
                 DropStrokeList.Transparency = 0
@@ -1051,7 +1051,7 @@ function Blacklib:Window(text)
                 DropItemStroke.Name = "DropItemStroke"
                 DropItemStroke.Parent = DropItemScroll
                 DropItemStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-                DropItemStroke.Color = Color3.fromRGB(180,180,180)
+                DropItemStroke.Color = Color3.fromRGB(255, 255, 0)
                 DropItemStroke.LineJoinMode = Enum.LineJoinMode.Round
                 DropItemStroke.Thickness = 0
                 DropItemStroke.Transparency = 0
@@ -1072,7 +1072,7 @@ function Blacklib:Window(text)
                             {Rotation = 180}
                             ):Play()
                         game.TweenService:Create(ImageButton, TweenInfo.new(0.08, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut),
-                            {ImageColor3 = Color3.fromRGB(180,180,180)}
+                            {ImageColor3 = Color3.fromRGB(255, 255, 0)}
                             ):Play()
                         
                     else
@@ -1084,7 +1084,7 @@ function Blacklib:Window(text)
                             {Rotation = 0}
                             ):Play()
                         game.TweenService:Create(ImageButton, TweenInfo.new(0.08, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut),
-                            {ImageColor3 = Color3.fromRGB(0,255,0)}
+                            {ImageColor3 = Color3.fromRGB(255, 255, 0)}
                             ):Play()
                     end
                 end)
@@ -1105,12 +1105,12 @@ function Blacklib:Window(text)
                     
                     ItemList.Name = "ItemList"
                     ItemList.Parent = DropItemScroll
-                    ItemList.BackgroundColor3 = Color3.fromRGB(0,255,0)
+                    ItemList.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
                     ItemList.BackgroundTransparency = 1.000
                     ItemList.Size = UDim2.new(0, 375, 0, 30)
                     ItemList.AutoButtonColor = false
                     ItemList.Font = Enum.Font.Code
-                    ItemList.TextColor3 = Color3.fromRGB(180,180,180)
+                    ItemList.TextColor3 = Color3.fromRGB(255, 255, 0)
                     ItemList.TextSize = 12.000
                     ItemList.Text = v or "None..."
                     ItemList.TextXAlignment = Enum.TextXAlignment.Center
@@ -1137,7 +1137,7 @@ function Blacklib:Window(text)
                             {Rotation = 180}
                             ):Play()
                         game.TweenService:Create(ImageButton, TweenInfo.new(0.08, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut),
-                            {ImageColor3 = Color3.fromRGB(180,180,180)}
+                            {ImageColor3 = Color3.fromRGB(255, 255, 0)}
                             ):Play()
                     end)
                     DropItemScroll.CanvasSize = UDim2.new(0, 0, 0, DropItemLayout.AbsoluteContentSize.Y)
@@ -1160,7 +1160,7 @@ function Blacklib:Window(text)
                         {Rotation = 180}
                         ):Play()
                     game.TweenService:Create(ImageButton, TweenInfo.new(0.08, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut),
-                        {ImageColor3 = Color3.fromRGB(180,180,180)}
+                        {ImageColor3 = Color3.fromRGB(255, 255, 0)}
                         ):Play()
                 end
                 
@@ -1180,12 +1180,12 @@ function Blacklib:Window(text)
                     local ItemList = Instance.new("TextButton")
                     ItemList.Name = "ItemList"
                     ItemList.Parent = DropItemScroll
-                    ItemList.BackgroundColor3 = Color3.fromRGB(0,255,0)
+                    ItemList.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
                     ItemList.BackgroundTransparency = 1.000
                     ItemList.Size = UDim2.new(0, 375, 0, 30)
                     ItemList.AutoButtonColor = false
                     ItemList.Font = Enum.Font.Code
-                    ItemList.TextColor3 = Color3.fromRGB(255,0,0)
+                    ItemList.TextColor3 = Color3.fromRGB(255, 255, 0)
                     ItemList.TextSize = 12.000
                     ItemList.Text = newadd or "None..."
                     ItemList.TextXAlignment = Enum.TextXAlignment.Center
@@ -1212,7 +1212,7 @@ function Blacklib:Window(text)
                             {Rotation = 180}
                             ):Play()
                         game.TweenService:Create(ImageButton, TweenInfo.new(0.08, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut),
-                            {ImageColor3 = Color3.fromRGB(180,180,180)}
+                            {ImageColor3 = Color3.fromRGB(255, 255, 0)}
                             ):Play()
                     end)
                     DropItemScroll.CanvasSize = UDim2.new(0, 0, 0, DropItemLayout.AbsoluteContentSize.Y)
@@ -1262,7 +1262,7 @@ function Blacklib:Window(text)
                 UIStroke.Name = "UIStroke"
                 UIStroke.Parent = SliderFrame_2
                 UIStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-                UIStroke.Color = Color3.fromRGB(180,180,180)
+                UIStroke.Color = Color3.fromRGB(255, 255, 0)
                 UIStroke.LineJoinMode = Enum.LineJoinMode.Round
                 UIStroke.Thickness = 0.5
                 UIStroke.Transparency = 0
@@ -1280,7 +1280,7 @@ function Blacklib:Window(text)
                 ImageLabel.Position = UDim2.new(0, 5, 0, 5)
                 ImageLabel.Size = UDim2.new(0, 18, 0, 18)
                 ImageLabel.Image = "rbxassetid://8825007757"
-                ImageLabel.ImageColor3 = Color3.fromRGB(180,180,180)
+                ImageLabel.ImageColor3 = Color3.fromRGB(255, 255, 0)
                 
                 Space.Name = "Space"
                 Space.Parent = SliderFrame_2
@@ -1291,7 +1291,7 @@ function Blacklib:Window(text)
                 Space.Font = Enum.Font.GothamSemibold
                 Space.Text = "|"
                 Space.TextSize = 13.000
-                Space.TextColor3 = Color3.fromRGB(180,180,180)
+                Space.TextColor3 = Color3.fromRGB(255, 255, 0)
                 Space.TextXAlignment = Enum.TextXAlignment.Center
             
                 Title.Name = "Title"
@@ -1302,13 +1302,13 @@ function Blacklib:Window(text)
                 Title.Size = UDim2.new(0, 280, 0, 30)
                 Title.Font = Enum.Font.Code
                 Title.Text = slidertitle or "Slider Title"
-                Title.TextColor3 = Color3.fromRGB(180,180,180)
+                Title.TextColor3 = Color3.fromRGB(255, 255, 0)
                 Title.TextSize = 12.000
                 Title.TextXAlignment = Enum.TextXAlignment.Left
                 
                 SliderInput.Name = "SliderInput"
                 SliderInput.Parent = SliderFrame_2
-                SliderInput.BackgroundColor3 = Color3.fromRGB(0, 200, 0)
+                SliderInput.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
                 SliderInput.BackgroundTransparency = 0.7
                 SliderInput.BorderSizePixel = 0
                 SliderInput.Position = UDim2.new(0, 8, 0, 37)
@@ -1327,7 +1327,7 @@ function Blacklib:Window(text)
             
                 SliderCount.Name = "SliderCount"
                 SliderCount.Parent = SliderButton
-                SliderCount.BackgroundColor3 = Color3.fromRGB(0,200,0)
+                SliderCount.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
                 SliderCount.BackgroundTransparency = 0.3
                 SliderCount.BorderSizePixel = 0
                 SliderCount.Position = UDim2.new(0,start,0,0)
@@ -1336,7 +1336,7 @@ function Blacklib:Window(text)
                 Title_2.Name = "Title_2"
                 Title_2.Parent = SliderButton
                 Title_2.AnchorPoint = Vector2.new(0, 0)
-                Title_2.BackgroundColor3 = Color3.fromRGB(0,200,0)
+                Title_2.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
                 Title_2.AutoButtonColor = false
                 Title_2.BackgroundTransparency = 1.000
                 Title_2.Position = UDim2.new(0,start,0,0)
@@ -1356,7 +1356,7 @@ function Blacklib:Window(text)
                 SliderStroke.Name = "SliderStroke"
                 SliderStroke.Parent = BoxFrame
                 SliderStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-                SliderStroke.Color = Color3.fromRGB(180,180,180)
+                SliderStroke.Color = Color3.fromRGB(255, 255, 0)
                 SliderStroke.LineJoinMode = Enum.LineJoinMode.Round
                 SliderStroke.Thickness = 1
                 SliderStroke.Transparency = 0.5
@@ -1372,14 +1372,14 @@ function Blacklib:Window(text)
             
                 SliderBox.Name = "SliderBox"
                 SliderBox.Parent = BoxFrame
-                SliderBox.BackgroundColor3 = Color3.fromRGB(200, 0, 0)
+                SliderBox.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
                 SliderBox.BackgroundTransparency = 1.000
                 SliderBox.Position = UDim2.new(0, 0, 0, 1.65)
                 SliderBox.Size = UDim2.new(0, 50, 0, 15)
                 SliderBox.ClearTextOnFocus = false
                 SliderBox.Font = Enum.Font.Code
                 SliderBox.Text = tostring(start and math.floor((start / max) * (max - min) + min) or 0)
-                SliderBox.TextColor3 = Color3.fromRGB(200,200,200)
+                SliderBox.TextColor3 = Color3.fromRGB(255, 255, 0)
                 SliderBox.TextSize = 10.000
                 SliderBox.TextTransparency = 0
                 SliderBox.TextXAlignment = Enum.TextXAlignment.Center
@@ -1599,7 +1599,7 @@ function Blacklib:Window(text)
                 
                 UIStroke2.Parent = BoxCover
                 UIStroke2.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-                UIStroke2.Color = Color3.fromRGB(180,180,180)
+                UIStroke2.Color = Color3.fromRGB(255, 255, 0)
                 UIStroke2.LineJoinMode = Enum.LineJoinMode.Round
                 UIStroke2.Thickness = 0.5
                 UIStroke2.Transparency = 0
@@ -1617,7 +1617,7 @@ function Blacklib:Window(text)
                 ImageLabel.Position = UDim2.new(0, 5, 0, 12)
                 ImageLabel.Size = UDim2.new(0, 18, 0, 18)
                 ImageLabel.Image = "rbxassetid://8825051254"
-                ImageLabel.ImageColor3 = Color3.fromRGB(180,180,180)
+                ImageLabel.ImageColor3 = Color3.fromRGB(255, 255, 0)
                 
                 Space.Name = "Space"
                 Space.Parent = BoxCover
@@ -1628,7 +1628,7 @@ function Blacklib:Window(text)
                 Space.Font = Enum.Font.GothamSemibold
                 Space.Text = "|"
                 Space.TextSize = 13.000
-                Space.TextColor3 = Color3.fromRGB(180,180,180)
+                Space.TextColor3 = Color3.fromRGB(255, 255, 0)
                 Space.TextXAlignment = Enum.TextXAlignment.Center
             
                 Title.Name = "Title"
@@ -1639,24 +1639,24 @@ function Blacklib:Window(text)
                 Title.Size = UDim2.new(0, 280, 0, 40)
                 Title.Font = Enum.Font.Code
                 Title.Text = boxtitle or "box Title"
-                Title.TextColor3 = Color3.fromRGB(180,180,180)
+                Title.TextColor3 = Color3.fromRGB(255, 255, 0)
                 Title.TextSize = 12.000
                 Title.TextXAlignment = Enum.TextXAlignment.Left
                 
                 TextBox.Name = "TextBox"
                 TextBox.Parent = BoxCover
-                TextBox.BackgroundColor3 = Color3.fromRGB(190, 190, 180)
+                TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
                 TextBox.BackgroundTransparency = 1.000
                 TextBox.Position = UDim2.new(0, 293, 0, 10)
                 TextBox.Size = UDim2.new(0, 80, 0, 20)
                 TextBox.Font = Enum.Font.Code
                 TextBox.PlaceholderText = textbox or "Type Here"
                 TextBox.Text = ""
-                TextBox.TextColor3 = Color3.fromRGB(180,180,180)
+                TextBox.TextColor3 = Color3.fromRGB(255, 255, 0)
                 TextBox.TextWrapped = true
                 TextBox.TextScaled = false
                 TextBox.TextTransparency = 0.5
-                TextBox.PlaceholderColor3 = Color3.fromRGB(180,180,180)
+                TextBox.PlaceholderColor3 = Color3.fromRGB(255, 255, 0)
                 TextBox.TextSize = 12.000
             
                 UICorner_2.Parent = TextBox
@@ -1664,7 +1664,7 @@ function Blacklib:Window(text)
             
                 UIStroke.Parent = TextBox
                 UIStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-                UIStroke.Color = Color3.fromRGB(180,180,180)
+                UIStroke.Color = Color3.fromRGB(255, 255, 0)
                 UIStroke.LineJoinMode = Enum.LineJoinMode.Round
                 UIStroke.Thickness = 1
                 UIStroke.Transparency = 0.5
@@ -1729,7 +1729,7 @@ function Blacklib:Window(text)
                 
                 UIStroke2.Parent = BindFrame_2
                 UIStroke2.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-                UIStroke2.Color = Color3.fromRGB(180,180,180)
+                UIStroke2.Color = Color3.fromRGB(255, 255, 0)
                 UIStroke2.LineJoinMode = Enum.LineJoinMode.Round
                 UIStroke2.Thickness = 0.5
                 UIStroke2.Transparency = 0
@@ -1747,7 +1747,7 @@ function Blacklib:Window(text)
                 ImageLabel.Position = UDim2.new(0, 5, 0, 12)
                 ImageLabel.Size = UDim2.new(0, 18, 0, 18)
                 ImageLabel.Image = "rbxassetid://8930945601"
-                ImageLabel.ImageColor3 = Color3.fromRGB(180,180,180)
+                ImageLabel.ImageColor3 = Color3.fromRGB(255, 255, 0)
                 
                 Space.Name = "Space"
                 Space.Parent = BindFrame_2
@@ -1758,7 +1758,7 @@ function Blacklib:Window(text)
                 Space.Font = Enum.Font.GothamSemibold
                 Space.Text = "|"
                 Space.TextSize = 13.000
-                Space.TextColor3 = Color3.fromRGB(180,180,180)
+                Space.TextColor3 = Color3.fromRGB(255, 255, 0)
                 Space.TextXAlignment = Enum.TextXAlignment.Center
             
                 Title.Name = "Title"
@@ -1769,20 +1769,20 @@ function Blacklib:Window(text)
                 Title.Size = UDim2.new(0, 280, 0, 40)
                 Title.Font = Enum.Font.Code
                 Title.Text = textbind or "bind Title"
-                Title.TextColor3 = Color3.fromRGB(180,180,180)
+                Title.TextColor3 = Color3.fromRGB(255, 255, 0)
                 Title.TextSize = 12.000
                 Title.TextXAlignment = Enum.TextXAlignment.Left
                 
                 KeyBindButton.Name = textbind or "KeyBindButton"
                 KeyBindButton.Parent = BindFrame_2
-                KeyBindButton.BackgroundColor3 = Color3.fromRGB(190, 190, 180)
+                KeyBindButton.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
                 KeyBindButton.BackgroundTransparency = 1.000
                 KeyBindButton.AutoButtonColor = false
                 KeyBindButton.Position = UDim2.new(0, 297, 0, 10)
                 KeyBindButton.Size = UDim2.new(0, 80, 0, 20)
                 KeyBindButton.Font = Enum.Font.Code
                 KeyBindButton.Text = preset.Name
-                KeyBindButton.TextColor3 = Color3.fromRGB(180,180,180)
+                KeyBindButton.TextColor3 = Color3.fromRGB(255, 255, 0)
                 KeyBindButton.TextSize = 12.000
                 KeyBindButton.TextXAlignment = Enum.TextXAlignment.Center
                 
@@ -1791,7 +1791,7 @@ function Blacklib:Window(text)
             
                 UIStroke.Parent = KeyBindButton
                 UIStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-                UIStroke.Color = Color3.fromRGB(180,180,180)
+                UIStroke.Color = Color3.fromRGB(255, 255, 0)
                 UIStroke.LineJoinMode = Enum.LineJoinMode.Round
                 UIStroke.Thickness = 0.5
                 UIStroke.Transparency = 0
@@ -1842,7 +1842,7 @@ function Blacklib:Window(text)
                 TextButton.Size = UDim2.new(0, 381, 0, 15)
                 TextButton.Font = Enum.Font.Code
                 TextButton.Text = textlabel or ""
-                TextButton.TextColor3 = Color3.fromRGB(255,255,255)
+                TextButton.TextColor3 = Color3.fromRGB(255, 255, 0)
                 TextButton.TextSize = 12.000
                 TextButton.TextXAlignment = Enum.TextXAlignment.Left
                 
@@ -1868,7 +1868,7 @@ function Blacklib:Window(text)
                 
                 Frame2.Name = "Line"
                 Frame2.Parent = sectionFrame
-                Frame2.BackgroundColor3 = Color3.fromRGB(200,200,200)
+                Frame2.BackgroundColor3 = Color3.fromRGB(255, 255, 0)
                 Frame2.BorderSizePixel = 0
                 Frame2.Position = UDim2.new(0, 8, 0, 1)
                 Frame2.Size = UDim2.new(0, 371, 0, 1)
