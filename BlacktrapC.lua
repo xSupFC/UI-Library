@@ -821,7 +821,7 @@ function Blacklib:Window(text)
                 UIStroke.Name = "UIStroke"
                 UIStroke.Parent = CheckFrame2
                 UIStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-                UIStroke.Color = Color3.fromRGB(180,180,180)
+                UIStroke.Color = Color3.fromRGB(255, 255, 0)
                 UIStroke.LineJoinMode = Enum.LineJoinMode.Round
                 UIStroke.Thickness = 0.5
                 UIStroke.Transparency = 0
