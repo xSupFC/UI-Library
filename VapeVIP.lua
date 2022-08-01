@@ -191,10 +191,8 @@ local LoadTitle = Instance.new("TextLabel")
 local DropdownHolderUIStrok1e = Instance.new("UIStroke")
 local BindCorner = Instance.new("UICorner")
 
-Screen.Parent = game.CoreGui
-
 LoadFrame2.Name = "LoadFrame"
-LoadFrame2.Parent = Screen
+LoadFrame2.Parent = ui
 LoadFrame2.AnchorPoint = Vector2.new(0.5, 0.5)
 LoadFrame2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 LoadFrame2.BorderSizePixel = 0
