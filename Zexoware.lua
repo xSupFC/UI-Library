@@ -188,7 +188,7 @@ local Barload = Instance.new("Frame")
 local BarloadCorner = Instance.new("UICorner")
 local LoadText = Instance.new("TextLabel")
 local LoadTitle = Instance.new("TextLabel")
-local DropdownHolderUIStroke = Instance.new("UIStroke")
+local DropdownHolderUIStrok1e = Instance.new("UIStroke")
 local BindCorner = Instance.new("UICorner")
 
 Screen.Parent = game.CoreGui
@@ -214,15 +214,14 @@ BindCorner.CornerRadius = UDim.new(0, 7)
 BindCorner.Name = "BindCorner"
 BindCorner.Parent = LoadFrame
 
-DropdownHolderUIStroke.Name = "DropdownHolderUIStroke"
-DropdownHolderUIStroke.Parent = LoadFrame
-DropdownHolderUIStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-DropdownHolderUIStroke.Color = Color3.fromRGB(0,255,255)
-DropdownHolderUIStroke.LineJoinMode = Enum.LineJoinMode.Round
-DropdownHolderUIStroke.Thickness = 3
-DropdownHolderUIStroke.Transparency = 0
-DropdownHolderUIStroke.Enabled = true
-DropdownHolderUIStroke.Archivable = true
+DropdownHolderUIStrok1e.Name = "DropdownHolderUIStroke"
+DropdownHolderUIStrok1e.Parent = LoadFrame
+DropdownHolderUIStrok1e.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+DropdownHolderUIStrok1e.Color = Color3.fromRGB(0,255,255)
+DropdownHolderUIStrok1e.LineJoinMode = Enum.LineJoinMode.Round
+DropdownHolderUIStrok1e.Thickness = 3
+DropdownHolderUIStrok1e.Enabled = true
+DropdownHolderUIStrok1e.Archivable = true
 
 Barload.Name = "Barload"
 Barload.Parent = LoadFrame
